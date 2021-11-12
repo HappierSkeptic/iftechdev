@@ -1,32 +1,51 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
-  </div>
+  <v-app>
+    <v-main>
+      <router-view v-slot="{ Component }">
+        <transition name="fade" mode="out-in">
+          <component :is="Component" />
+        </transition>
+      </router-view>
+    </v-main>
+    <v-bottom-navigation app dark>
+     
+        <v-layout>
+          <v-row>
+            <v-col class="d-flex align-center">
+              <router-link to="/">
+                <h1 style="color: white; margin-left: 10px">
+                  iftech
+                </h1></router-link
+              ></v-col
+            >
+
+            <v-col  class="d-flex align-center justify-center">
+              <v-btn style="margin-left: 10px" to="/about">About</v-btn>
+    
+              <v-btn style="margin-left: 10px" to="/contact">Contact</v-btn>
+            </v-col>
+       
+
+            <v-col></v-col>
+          </v-row>
+        </v-layout>
+ 
+
+
+    </v-bottom-navigation>
+  </v-app>
 </template>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+<script>
+export default {
+  name: "App",
 
-#nav {
-  padding: 30px;
-}
+  data: () => ({}),
+};
+</script>
 
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
+<style lang="scss">
+html {
+  overflow-y: auto;
 }
 </style>
