@@ -18,6 +18,10 @@
             <button class="slide">Slide</button>
           <button class="offset">Enter</button>
         </div> -->
+<!-- 
+        <div class="content">
+          <h3 style="font-size: .7em; margin-left:50%">A (p,q)-torus knot is obtained by looping a string through the hole of a torus p times with q revolutions before joining its ends, where p and q are relatively prime. A (p,q)-torus knot is equivalent to a (q,p)-torus knot. All torus knots are prime (Hoste et al. 1998, Burde and Zieschang 2002). Torus knots are all chiral, invertible, and have symmetry group D_1 (Schreier 1924, Hoste et al. 1998).</h3>
+        </div> -->
       </div>
 
       <canvas class="webgl"></canvas>
